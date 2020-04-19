@@ -1,0 +1,14 @@
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\Common\bin\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\Common\bin\Debug\Common.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\Common\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\Common\obj\x86\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\Common\obj\x86\Debug\Common.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\bin\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\bin\Debug\Common.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.pdb
+C:\Desarrollo\WhatsMyIpSpammer\Common\bin\Debug\Common.dll
+C:\Desarrollo\WhatsMyIpSpammer\Common\bin\Debug\Common.pdb
+C:\Desarrollo\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.dll
+C:\Desarrollo\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.pdb

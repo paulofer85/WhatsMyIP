@@ -1,0 +1,36 @@
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.dll.config
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\SvcIP.exe
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\Common.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\bin\Debug\SvcIP.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.dll.config
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\SvcIP.exe
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\Common.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\SvcIP.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.pdb
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.dll.config
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.dll
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\TestWhatsMyIP.pdb
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\Common.dll
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\SvcIP.exe
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\Common.pdb
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\bin\Debug\SvcIP.pdb
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.csprojResolveAssemblyReference.cache
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.dll
+C:\Desarrollo\WhatsMyIpSpammer\TestWhatsMyIP\obj\Debug\TestWhatsMyIP.pdb

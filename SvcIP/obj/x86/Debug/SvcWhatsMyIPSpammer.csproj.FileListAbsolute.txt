@@ -1,0 +1,25 @@
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe.config
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\Common.dll
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\Common.pdb
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcSpam.ProjectInstaller.resources
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcIP.exe
+C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcIP.pdb
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe.config
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.pdb
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\Common.dll
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\bin\Debug\Common.pdb
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcWhatsMyIPSpammer.csprojResolveAssemblyReference.cache
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcSpam.ProjectInstaller.resources
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcWhatsMyIPSpammer.csproj.GenerateResource.Cache
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcIP.exe
+C:\Desarrollo\WhatsMyIpSpammer\SvcIP\obj\x86\Debug\SvcIP.pdb
