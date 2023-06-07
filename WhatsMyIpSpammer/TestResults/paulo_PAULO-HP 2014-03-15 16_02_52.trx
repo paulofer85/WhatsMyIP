@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="5b037443-1a6d-40dd-ace2-099feeffe29d" name="paulo@PAULO-HP 2014-03-15 16:02:52" runUser="paulo-HP\paulo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6cbb6e20-5e4b-4b57-a53a-816d3f4418ad">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="paulo_PAULO-HP 2014-03-15 16_02_52">
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\BusinessLogicWhatsMyIp.dll" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\bin\Debug\Common.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-15T16:02:52.9282624-03:00" queuing="2014-03-15T16:02:55.1953921-03:00" start="2014-03-15T16:02:55.5604130-03:00" finish="2014-03-15T16:03:12.0453559-03:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PAULO-HP" outcome="Error" timestamp="2014-03-15T16:03:12.0353553-03:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetMailsFromFileTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="25fcd906-e77b-191c-a018-5b5d61d8dcc0">
+      <Execution id="e45dc90a-a75b-4622-aada-fca534eb673c" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetMailsFromFileTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="25fcd906-e77b-191c-a018-5b5d61d8dcc0" executionId="e45dc90a-a75b-4622-aada-fca534eb673c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e45dc90a-a75b-4622-aada-fca534eb673c" testId="25fcd906-e77b-191c-a018-5b5d61d8dcc0" testName="GetMailsFromFileTest" computerName="PAULO-HP" duration="00:00:16.1889260" startTime="2014-03-15T16:02:55.8564299-03:00" endTime="2014-03-15T16:03:12.0453559-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e45dc90a-a75b-4622-aada-fca534eb673c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

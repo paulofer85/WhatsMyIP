@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2e387f34-1f88-40e2-a99f-886caa967c4b" name="paulo@PAULO-HP 2014-03-15 14:02:20" runUser="paulo-HP\paulo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6cbb6e20-5e4b-4b57-a53a-816d3f4418ad">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="paulo_PAULO-HP 2014-03-15 14_02_20">
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\BusinessLogicWhatsMyIp.dll" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\bin\Debug\Common.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-15T14:02:20.1705723-03:00" queuing="2014-03-15T14:02:22.2226897-03:00" start="2014-03-15T14:02:22.5087061-03:00" finish="2014-03-15T14:02:28.7010603-03:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="8" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="7" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PAULO-HP" outcome="Error" timestamp="2014-03-15T14:02:28.6370566-03:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CheckNewPublicIPAdressTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="20469ab2-acc5-2da1-f1bf-3bd34d718525">
+      <Execution id="c3bb8f2a-3919-4682-b046-c44f26bce587" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.BusinessTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CheckNewPublicIPAdressTest" />
+    </UnitTest>
+    <UnitTest name="GetLocalIPTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="1fc8b5c4-179e-ce15-381f-fc0608e7bf41">
+      <Execution id="f3d3374f-af46-401a-9ff5-de531f127dbe" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLocalIPTest" />
+    </UnitTest>
+    <UnitTest name="GetNetStatTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="54830637-d953-d20a-a67d-c9e091d00a85">
+      <Execution id="33212af7-1837-417a-9612-b1a1e7ad5fd3" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetNetStatTest" />
+    </UnitTest>
+    <UnitTest name="GetAllIPInfoTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="5e24e864-5a47-07d9-9c53-23d1d4c27023">
+      <Execution id="b968726f-9c8d-4e65-bd59-3f5d58c7f161" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllIPInfoTest" />
+    </UnitTest>
+    <UnitTest name="GetGeoLocationIPTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="0c3b5acd-8bcb-f4c7-7100-3962df9d85bb">
+      <Execution id="0b7aab67-2440-4f23-b0f6-57d3c6ea41ba" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetGeoLocationIPTest" />
+    </UnitTest>
+    <UnitTest name="GetGlobalIPTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="6c2d485c-7761-b44b-ae3e-394c84cf8f85">
+      <Execution id="7f19089f-1d2b-4e6c-948b-62a476daac79" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetGlobalIPTest" />
+    </UnitTest>
+    <UnitTest name="SendMailTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="6195fb63-df6d-b0f3-ccc8-709c4fba0e33">
+      <Execution id="1a5da99b-26dd-4b06-8f61-744d89234f00" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SendMailTest" />
+    </UnitTest>
+    <UnitTest name="GetIPGlobalPropertiesTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="8ba27934-df99-88ed-d429-d048086397c3">
+      <Execution id="f7eb42bf-3c0c-42f4-a574-f4ebb93aeee5" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetIPGlobalPropertiesTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0c3b5acd-8bcb-f4c7-7100-3962df9d85bb" executionId="0b7aab67-2440-4f23-b0f6-57d3c6ea41ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1fc8b5c4-179e-ce15-381f-fc0608e7bf41" executionId="f3d3374f-af46-401a-9ff5-de531f127dbe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20469ab2-acc5-2da1-f1bf-3bd34d718525" executionId="c3bb8f2a-3919-4682-b046-c44f26bce587" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54830637-d953-d20a-a67d-c9e091d00a85" executionId="33212af7-1837-417a-9612-b1a1e7ad5fd3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5e24e864-5a47-07d9-9c53-23d1d4c27023" executionId="b968726f-9c8d-4e65-bd59-3f5d58c7f161" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6195fb63-df6d-b0f3-ccc8-709c4fba0e33" executionId="1a5da99b-26dd-4b06-8f61-744d89234f00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c2d485c-7761-b44b-ae3e-394c84cf8f85" executionId="7f19089f-1d2b-4e6c-948b-62a476daac79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ba27934-df99-88ed-d429-d048086397c3" executionId="f7eb42bf-3c0c-42f4-a574-f4ebb93aeee5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0b7aab67-2440-4f23-b0f6-57d3c6ea41ba" testId="0c3b5acd-8bcb-f4c7-7100-3962df9d85bb" testName="GetGeoLocationIPTest" computerName="PAULO-HP" duration="00:00:05.9523404" startTime="2014-03-15T14:02:22.7007171-03:00" endTime="2014-03-15T14:02:28.6530575-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b7aab67-2440-4f23-b0f6-57d3c6ea41ba">
+    </UnitTestResult>
+    <UnitTestResult executionId="f3d3374f-af46-401a-9ff5-de531f127dbe" testId="1fc8b5c4-179e-ce15-381f-fc0608e7bf41" testName="GetLocalIPTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3d3374f-af46-401a-9ff5-de531f127dbe">
+    </UnitTestResult>
+    <UnitTestResult executionId="c3bb8f2a-3919-4682-b046-c44f26bce587" testId="20469ab2-acc5-2da1-f1bf-3bd34d718525" testName="CheckNewPublicIPAdressTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3bb8f2a-3919-4682-b046-c44f26bce587">
+    </UnitTestResult>
+    <UnitTestResult executionId="33212af7-1837-417a-9612-b1a1e7ad5fd3" testId="54830637-d953-d20a-a67d-c9e091d00a85" testName="GetNetStatTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33212af7-1837-417a-9612-b1a1e7ad5fd3">
+    </UnitTestResult>
+    <UnitTestResult executionId="b968726f-9c8d-4e65-bd59-3f5d58c7f161" testId="5e24e864-5a47-07d9-9c53-23d1d4c27023" testName="GetAllIPInfoTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b968726f-9c8d-4e65-bd59-3f5d58c7f161">
+    </UnitTestResult>
+    <UnitTestResult executionId="1a5da99b-26dd-4b06-8f61-744d89234f00" testId="6195fb63-df6d-b0f3-ccc8-709c4fba0e33" testName="SendMailTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a5da99b-26dd-4b06-8f61-744d89234f00">
+    </UnitTestResult>
+    <UnitTestResult executionId="7f19089f-1d2b-4e6c-948b-62a476daac79" testId="6c2d485c-7761-b44b-ae3e-394c84cf8f85" testName="GetGlobalIPTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f19089f-1d2b-4e6c-948b-62a476daac79">
+    </UnitTestResult>
+    <UnitTestResult executionId="f7eb42bf-3c0c-42f4-a574-f4ebb93aeee5" testId="8ba27934-df99-88ed-d429-d048086397c3" testName="GetIPGlobalPropertiesTest" computerName="PAULO-HP" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7eb42bf-3c0c-42f4-a574-f4ebb93aeee5">
+    </UnitTestResult>
+  </Results>
+</TestRun>

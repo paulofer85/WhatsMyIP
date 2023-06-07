@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="650b301b-a343-47e7-902f-03fc213f3381" name="paulo@PAULO-HP 2014-01-21 15:47:20" runUser="paulo-HP\paulo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6cbb6e20-5e4b-4b57-a53a-816d3f4418ad">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="paulo_PAULO-HP 2014-01-21 15_47_20">
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\BusinessLogicWhatsMyIp\bin\Debug\BusinessLogicWhatsMyIp.dll" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\SvcIP\bin\Debug\SvcIP.exe" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIp\Common\bin\Debug\Common.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-01-21T15:47:20.8953619-03:00" queuing="2014-01-21T15:47:24.2655547-03:00" start="2014-01-21T15:47:24.6285755-03:00" finish="2014-01-21T15:49:31.1028094-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetGeoLocationIPTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyip\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="0c3b5acd-8bcb-f4c7-7100-3962df9d85bb">
+      <Execution id="0867422b-ec12-42cb-9466-48b40fe1aa7e" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIp/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetGeoLocationIPTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0c3b5acd-8bcb-f4c7-7100-3962df9d85bb" executionId="0867422b-ec12-42cb-9466-48b40fe1aa7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0867422b-ec12-42cb-9466-48b40fe1aa7e" testId="0c3b5acd-8bcb-f4c7-7100-3962df9d85bb" testName="GetGeoLocationIPTest" computerName="PAULO-HP" duration="00:02:04.4706320" startTime="2014-01-21T15:47:24.9065914-03:00" endTime="2014-01-21T15:49:30.8487948-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0867422b-ec12-42cb-9466-48b40fe1aa7e">
+    </UnitTestResult>
+  </Results>
+</TestRun>

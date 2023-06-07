@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="554b56f7-02a3-4d3b-a95b-8660ec4d0890" name="paulo@PAULO-HP 2014-03-15 14:38:54" runUser="paulo-HP\paulo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6cbb6e20-5e4b-4b57-a53a-816d3f4418ad">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="paulo_PAULO-HP 2014-03-15 14_38_54">
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\BusinessLogicWhatsMyIp.dll" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\SvcIP\bin\Debug\SvcIP.exe" />
+      <DeploymentItem filename="C:\Users\paulo\Documents\Visual Studio 2010\Projects\WhatsMyIpSpammer\Common\bin\Debug\Common.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-15T14:38:54.1810626-03:00" queuing="2014-03-15T14:38:54.5450834-03:00" start="2014-03-15T14:38:54.6300882-03:00" finish="2014-03-15T14:38:58.1942921-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SendMailTest" storage="c:\users\paulo\documents\visual studio 2010\projects\whatsmyipspammer\testwhatsmyip\bin\debug\testwhatsmyip.dll" id="6195fb63-df6d-b0f3-ccc8-709c4fba0e33">
+      <Execution id="40ae1f1c-29d2-44af-8725-bd021dd40055" />
+      <TestMethod codeBase="C:/Users/paulo/Documents/Visual Studio 2010/Projects/WhatsMyIpSpammer/TestWhatsMyIP/bin/Debug/TestWhatsMyIP.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestWhatsMyIP.UtilsTest, TestWhatsMyIP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SendMailTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6195fb63-df6d-b0f3-ccc8-709c4fba0e33" executionId="40ae1f1c-29d2-44af-8725-bd021dd40055" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="40ae1f1c-29d2-44af-8725-bd021dd40055" testId="6195fb63-df6d-b0f3-ccc8-709c4fba0e33" testName="SendMailTest" computerName="PAULO-HP" duration="00:00:02.8215575" startTime="2014-03-15T14:38:54.6480893-03:00" endTime="2014-03-15T14:38:58.1432892-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40ae1f1c-29d2-44af-8725-bd021dd40055">
+    </UnitTestResult>
+  </Results>
+</TestRun>
