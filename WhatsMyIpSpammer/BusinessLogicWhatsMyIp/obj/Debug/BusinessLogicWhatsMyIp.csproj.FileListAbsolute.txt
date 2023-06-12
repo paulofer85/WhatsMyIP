@@ -20,3 +20,13 @@ C:\Desarrollo\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWha
 C:\Desarrollo\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.pdb
 C:\desarrollo\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csprojAssemblyReference.cache
 C:\desarrollo\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.CopyComplete
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Common.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Common.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.AssemblyReference.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.CoreCompileInputs.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.CopyComplete
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\OpenPop.dll

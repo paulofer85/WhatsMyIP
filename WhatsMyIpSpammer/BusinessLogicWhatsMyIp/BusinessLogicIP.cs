@@ -9,14 +9,14 @@ namespace BusinessLogicWhatsMyIp
 {
 	public class BusinessLogicIP
 	{
-		public SMTPEmail email;
+		public Email email;
 		public string LocalIP { get; set; }
 		public string PublicIP { get; set; }
 		
 
 		public BusinessLogicIP()
 		{			
-			email = new SMTPEmail();
+			email = new Email();
 			ConfigureMailSettings();
 		}
 

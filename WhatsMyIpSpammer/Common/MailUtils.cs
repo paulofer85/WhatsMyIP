@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Net.Mail;
 using System.Net;
 using System.IO;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Sockets;
+using OpenPop.Pop3;
+using OpenPop.Mime.Header;
+using OpenPop.Mime;
+using System.Text.RegularExpressions;
 
 namespace Common
 {
-	public class SMTPEmail
+	public class Email
 	{
 		public string From { get; set; }
 		public string To { get; set; }
@@ -22,16 +26,29 @@ namespace Common
 		public string Domain{ get; set; }
 		public bool IsSSL{ get; set; }
 		public bool UseDefaultCredentials{ get; set; }
-	}
+        public int POP3Port { get; set; }
+    }
 
 	public static class MailUtils
 	{
+		public static bool IsValidEmail(string emailAddress)
+		{
+			try
+			{
+				MailAddress mailAddress = new MailAddress(emailAddress);
+				return true;
+			}
+			catch (FormatException)
+			{
+				return false;
+			}
+		}
 
 		/// <summary>
 		/// 
 		/// </summary>
 		/// <param name="email"></param>
-		public static bool SendEmail(SMTPEmail email)
+		public static bool SendEmail(Email email)
 		{
 			try
 			{
@@ -66,7 +83,7 @@ namespace Common
 
 
 
-		public static bool SendEmail(SMTPEmail email, string to)
+		public static bool SendEmail(Email email, string to)
 		{
 			try
 			{
@@ -95,8 +112,136 @@ namespace Common
 			catch (System.Net.Mail.SmtpException ex)
 			{
 				return false;
-				throw ex;
 			}
+		}
+
+
+		public static int GetEmailCount(string host, int port, string username, string password)
+		{
+			using (var client = new Pop3Client())
+			{
+                try
+                {
+					client.Connect(host, port, false);
+					client.Authenticate(username, password);
+
+					return client.GetMessageCount();
+				}
+                catch (Exception ex)
+                {
+					throw new Exception("Unable to get count of mails");
+				}
+
+			}
+		}
+
+
+		public static Email GetLastEmail(string host, int port, string username, string password)
+		{
+			var emailRdo = new Email();
+			using (var client = new Pop3Client())
+			{
+				client.Connect(host, port, false);
+				client.Authenticate(username, password);
+
+				int messageCount = client.GetMessageCount();
+				if (messageCount == 0)
+				{
+					throw new Exception("No emails found in the account.");
+				}
+
+				OpenPop.Mime.Message lastMessage = client.GetMessage(messageCount);
+
+				// Retrieve the subject
+				emailRdo.Subject = lastMessage.Headers.Subject;
+				
+				// Retrieve the sender
+				RfcMailAddress sender = lastMessage.Headers.From;
+				emailRdo.From = sender.Address.ToLower();
+
+				// Retrieve the recipient
+				RfcMailAddress recipient = lastMessage.Headers.To[0];
+				emailRdo.To = recipient.Address;
+
+				// Retrieve the body
+				MessagePart body = lastMessage.FindFirstPlainTextVersion();
+				if (body != null)
+				{
+					string bodyText = body.GetBodyAsText();
+					emailRdo.Message = bodyText;
+				}
+			}
+			return emailRdo;
+		}
+
+		public static Email GetEmailByIndex(int indexMail, string host, int port, string username, string password)
+		{
+			var emailRdo = new Email();
+			using (var client = new Pop3Client())
+			{
+				client.Connect(host, port, false);
+				client.Authenticate(username, password);
+
+				OpenPop.Mime.Message lastMessage = client.GetMessage(indexMail);
+
+				// Retrieve the subject
+				emailRdo.Subject = lastMessage.Headers.Subject;
+
+				// Retrieve the sender
+				RfcMailAddress sender = lastMessage.Headers.From;
+				emailRdo.From = sender.Address.ToLower();
+
+				// Retrieve the recipient
+				RfcMailAddress recipient = lastMessage.Headers.To[0];
+				emailRdo.To = recipient.Address;
+
+				// Retrieve the body
+				MessagePart body = lastMessage.FindFirstPlainTextVersion();
+				if (body != null)
+				{
+					string bodyText = body.GetBodyAsText();
+					emailRdo.Message = bodyText;
+				}
+			}
+			return emailRdo;
+		}
+
+		public static Email GetEmailByIndex(Pop3Client client, int indexMail, string host, int port, string username, string password)
+		{
+			var emailRdo = new Email();
+
+			OpenPop.Mime.Message lastMessage = client.GetMessage(indexMail);
+
+			// Retrieve the subject
+			emailRdo.Subject = lastMessage.Headers.Subject;
+
+			// Retrieve the sender
+			RfcMailAddress sender = lastMessage.Headers.From;
+			emailRdo.From = sender.Address.ToLower();
+
+			// Retrieve the recipient
+			RfcMailAddress recipient = lastMessage.Headers.To[0];
+			emailRdo.To = recipient.Address;
+
+			// Retrieve the body
+			MessagePart body = lastMessage.FindFirstPlainTextVersion();
+			if (body != null)
+			{
+				string bodyText = body.GetBodyAsText();
+				emailRdo.Message = bodyText;
+				}
+			return emailRdo;
+		}
+
+		public static string ExtractEmailFromFailedSent(string input)
+		{
+			string pattern = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}";
+
+			Match match = Regex.Match(input, pattern);
+			if (match.Success && IsValidEmail(match.Value))
+				return match.Value;
+
+			return null;
 		}
 
 

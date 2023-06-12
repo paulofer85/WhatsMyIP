@@ -7,76 +7,70 @@ using System.Diagnostics;
 
 namespace Spammer
 {
-	class Program
-	{
+    class Program
+    {
 
-		private static BusinessLogicSpam bLSpam;
-		
-		public static DateTime lastSendTime;
-		public static String message;
+        private static BusinessLogicSpam bLSpam;
+
+        public static DateTime lastSendTime;
+        public static String message;
         public static String[] mails;
         public static String[] deleteMails;
-		
 
-		private static void ProcessMails()
+
+        private static void ProcessMails()
         {
             try
             {
-				//EventLog eLog = new EventLog();
-				//eLog.Source = "Spammer";
-				//eLog.Log = "Spammer" + "Log";
-				//eLog.WriteEntry("WhatsMyIPSpammer: se inicializa el svc");
+                //EventLog eLog = new EventLog();
+                //eLog.Source = "Spammer";
+                //eLog.Log = "Spammer" + "Log";
+                //eLog.WriteEntry("WhatsMyIPSpammer: se inicializa el svc");
+                int cont = 0;
+                while (mails[cont] != "END")
+                {
+                    if (bLSpam.sendCount < 150)
+                    {
+                        lastSendTime = DateTime.Now;
+                        if (!deleteMails.Contains(mails[cont]) && mails[cont] != String.Empty) 
+                        { 
+                            bLSpam.SendMail("[OSJ] Curso de Historia de la Astronomía", message);
+                            //bLSpam.SendMail("[OSJ] Curso presencial de Astronomía Observacional", message);
+                            //bLSpam.SendMail("[OSJ] Inauguración de telescopio", message);
+                            //bLSpam.SendMail("[OSJ] Curso de Telescopios", message);
+                            //bLSpam.SendMail("[OSJ] Curso de Misiones espaciales no tripuladas", message);
+                            //bLSpam.SendMail("[OSJ] Curso de Astronomía estelar", message);
+                            //bLSpam.SendMail("[OSJ] Charla sobre Ciencia y Fe", message);
+                            //bLSpam.SendMail("[OSJ] 2do Curso Intensivo de Introducción a la Astrofotografía – 2022", message);
 
-				while (mails.Last() != String.Empty)
-				{
-					for (int i = 0; i < mails.Length; i++)
-					{
-						if (mails[i] != String.Empty && !deleteMails.Contains(mails[i]))
-						{
-							if (bLSpam.sendCount < 150)
-							{
-								lastSendTime = DateTime.Now;
-
-                                bLSpam.SendMail(mails[i], "[OSJ] Curso de Historia de la Astronomía", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] Curso presencial de Astronomía Observacional", message);
-                                //bLSpam.SendMail(mails[i], "", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] Inauguración de telescopio", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] Curso de Telescopios", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] Curso de Misiones espaciales no tripuladas", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] Curso de Astronomía estelar", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] Charla sobre Ciencia y Fe", message);
-                                //bLSpam.SendMail(mails[i], "[OSJ] 2do Curso Intensivo de Introducción a la Astrofotografía – 2022", message);
-
-								System.Console.WriteLine("WhatsMyIPSpammer: se envio el mail nro " + i + " mail " + mails[i]);
-								//eLog.WriteEntry("WhatsMyIPSpammer: se envio el mail nro " + i + " mail " + mails[i]);
-								
-								mails[i] = String.Empty;								
-							}
-							else if (DateTime.Now > lastSendTime.AddHours(1))
-							{
-								bLSpam.sendCount = 0;
-								System.Console.WriteLine("WhatsMyIPSpammer: se cumplio la hora luego de haber envido lote de mails");
-							}
-						}
-						System.Threading.Thread.Sleep(5000);
-					}					
-				}
+                            System.Console.WriteLine("WhatsMyIPSpammer: se envio el mail nro " + cont + " mail " + mails[cont]);
+                            //eLog.WriteEntry("WhatsMyIPSpammer: se envio el mail nro " + i + " mail " + mails[cont]);
+                        }
+                        cont++;
+                    }
+                    else if (DateTime.Now > lastSendTime.AddHours(1))
+                    {
+                        bLSpam.sendCount = 0;
+                        System.Console.WriteLine("WhatsMyIPSpammer: se cumplio la hora luego de haber envido lote de mails");
+                    }
+                    System.Threading.Thread.Sleep(5000);
+                }
                 System.Console.ReadKey();
             }
             catch (Exception x)
             {
-				System.Console.WriteLine(new System.IO.ErrorEventArgs(x).ToString());
+                System.Console.WriteLine(new System.IO.ErrorEventArgs(x).ToString());
             }
- 
-        }
-		static void Main(string[] args)
-		{
 
-			bLSpam = new BusinessLogicSpam();
+        }
+        static void Main(string[] args)
+        {
+
+            bLSpam = new BusinessLogicSpam();
 
             //message = "Amigos de la Torre, tenemos el agrado de invitarlo <b>'nuevo telescopio Padre Pommes'</b>, en el Observatorio San José. <br />"
             //    + "El antiguo telescopio Mailhat de principios del S. XX es preservado hoy en nuestro museo, en su lugar se ha instalado un moderno Meade LX600-ACF14 que lleva el nombre de Padre Pommes, el fundador de nuestro Observatorio."
-            //                    + "<b><br /><br /><ul><li>Fecha: </b>Viernes 20/10/17</li><li><b>Hora: </b>de 20 a 22 hs</li><li><b>Entrada:</b> Gratuita</li><li><b>Gesto solidario: </b>Agradecemos la entrega de un alimento no perecedero o un elemento de higiene personal para ser entregado a la Parroquia Sagrado Corazón de Barracas</li><li><b>Dirección: </b>Bartolomé Mitre 2455, Capital Federal (Colegio San José)</li><li><b>Informes e inscripción:</b><br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar<br />https://www.facebook.com/observatoriosj/</b></li></ul>";
+            //                    + "<b><br /><br /><ul><li>Fecha: </b>Viernes 20/10/17</li><li><b>Hora: </b>de 20 a 22 hs</li><li><b>Entrada:</b> Gratuita</li><li><b>Gesto solidario: </b>Agradecemos la entrega de un alimento no perecedero o un elemento de higiene personal para ser entregado a la Parroquia Sagrado Corazón de Barracas</li><li><b>Dirección: </b>Bartolomé Mitre 2455, Capital Federal (Colegio San José)</li><li><b>Informes e inscripción:</b><br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />https://www.facebook.com/observatoriosj/</b></li></ul>";
 
             ////Curso Observacional
             //message = "Amigos de la Torre<br /><br />El Viernes 23/09/22 comienza el curso de <b>'Astronomía Observacional'</b>, el objeto de este curso es que el alumno adquiera un conocimiento integral del cielo nocturno aprendiendo conceptos como: sistemas de coordenadas, constelaciones, movimientos de los planetas, principales estrellas y lectura e interpretación de diferentes cartas celestes. <br /> <br />  El curso está basado principalmente en observaciones prácticas, con diferentes instrumentos, con el fin de que el alumno logre familiarizarse rápidamente con el firmamentoy pueda identificar constelaciones y planetas, usar cartas celestes y manejar un telescopio y su puesta en estación. <br /><br /> Dados los contenidos, el curso está dirigido a adultos y adolescntes y no se requieren conocimientos previos."
@@ -86,25 +80,25 @@ namespace Spammer
             ////Curso telescopios
             //message = "Amigos de la Torre<br /><br />El viernes 11/10/19 comienza el curso de <b>'Telescopios'</b>, el temario comprende nociones de óptica, funcionamiento de los diversos tipos de telescopios, selección de oculares y accesorios, monturas y su empleo, así como uso de instrumentos y prácticas de observación con los mismos. El curso está ideado para todos los que quieran aprender a manejar un telescopio ya sea que estén por comprar uno o que ya lo posean y deseen sacarle el mayor provecho."
             //   + "<br /><br /><b>Dados los contenidos y metodologías aplicadas en el curso, el mismo es para adultos y chicos de 12 años en adelante y no se necesitan conocimientos previos de matemática, física o astronomía.</b>"
-            //        + "<b><br /><br /><ul><li>Comienzo: viernes 11/10/19</li><li>Duración: 6 clases</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1500 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
+            //        + "<b><br /><br /><ul><li>Comienzo: viernes 11/10/19</li><li>Duración: 6 clases</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1500 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar</b></li></ul>";
 
             //Curso misiones espaciales
             //message = "Amigos de la Torre<br /><br />El viernes 08/08/19 comenzará el curso sobre <b>Misiones espaciales no tripuladas</b>. Este curso brinda al participante conocimientos básicos sobre astronáutica y exploración del espacio por medio de sondas no tripuladas. Entre otros temas, se propone descubrir cuáles fueron los acontecimientos claves en la historia del desarrollo de los primeros cohetes, la construcción y lanzamiento de las primeras naves al espacio, la exploración de los cuerpos que componen el sistema solar y temas relacionados con el futuro de las misiones no tripuladas."
             //  + "<br /><br />Cada clase será además una interesante oportunidad para aprender más sobre los planetas, asteroides y otros cuerpos celestes que han podido ser estudiados con mayor detalle gracias a los avances tecnológicos de los últimos 3 siglos, a la vez que podremos hallar inspiración en las biografías de algunos hombres de ciencia cuyas mentes sobresalientes estuvieron un paso más allá de su tiempo."
-            //        + "<br /><br /><ul><li>El acceso al Observatorio es <b>por escalera y equivale a 8 pisos. </b></li><li>Comienzo: Viernes 10/08/18</li><li>Duración: 6 clases</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1000 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
+            //        + "<br /><br /><ul><li>El acceso al Observatorio es <b>por escalera y equivale a 8 pisos. </b></li><li>Comienzo: Viernes 10/08/18</li><li>Duración: 6 clases</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1000 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar</b></li></ul>";
 
             //Curso Estelar
             //message = "Amigos de la Torre<br /><br />El viernes 05/10/18 comenzará el curso sobre <b>Astronomía estelar</b> este curso brinda al participante conocimientos sobre estrellas y sistemas estelares. Comenzando con las bases de la dinámica estelar y continuando con sistemas estelares simples el alumno tiene un primer acercamiento a la vida de las estrellas, para finalizar luego con sistemas más complejos como cúmulos y galaxias. El curso es acompañado por observaciones de diversos sistemas y cúmulos estelares a través del telescopio principal del observatorio acorde a las efemérides."
             //  + "<br /><br />Dados los contenidos y metodologías aplicadas en el curso, el mismo es para adultos y chicos de 12 años en adelante y no se necesitan conocimientos previos de matemática, física o astronomía."
-            //        + "<br /><br /><ul><li>El acceso al Observatorio es <b>por escalera y equivale a 8 pisos. </b></li><li>Comienzo: Viernes 05/10/18</li><li>Duración: 5 clases</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1000 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
+            //        + "<br /><br /><ul><li>El acceso al Observatorio es <b>por escalera y equivale a 8 pisos. </b></li><li>Comienzo: Viernes 05/10/18</li><li>Duración: 5 clases</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1000 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar</b></li></ul>";
 
             //Curso Historia de la astronomia
 
             message = "Amigos de la Torre<br /><br />El Viernes 23/06/23 comenzará el curso sobre <b>Historia de la Astronomía. </b> Este curso está dirigido a todos aquellos, que con o sin nociones previas deseen adentrarse en la aventura del pensamiento científico y conocer más de cerca a sus protagonistas que tuvieron que mover los cielos luchando contra ideas preestablecidas desde por siglos. Aristarco, Copérnico, Kepler, Galileo, Newton, Einstein, Lemaitre y muchos otros nos acompañarán por la historia de la astronomía mostrando sus aciertos y errores, ampliando el conocimiento del universos para expandir una frontera que aún hoy nos sorprende."
               + "<br /><br />Dados los contenidos y metodologías aplicadas en el curso, el mismo es para adultos y chicos de 12 años en adelante y no se necesitan conocimientos previos de matemática, física o astronomía."
-            //  + "<b><br /><br /><ul><li>Comienzo: Jueves 08/08/19</li><li>Duración: 5 clases</li><li>Horario: Jueves de 19 a 21 hs</li><li>Edad mínima: 12 años</li><li>Arancel: $1500 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Dirección: Asociación de Fomento Villa Devoto, Biblioteca Presidente Roque Sáenz Peña, Joaquín V. González y Habana, CABA</li><li>Informes e inscripción:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
+            //  + "<b><br /><br /><ul><li>Comienzo: Jueves 08/08/19</li><li>Duración: 5 clases</li><li>Horario: Jueves de 19 a 21 hs</li><li>Edad mínima: 12 años</li><li>Arancel: $1500 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Dirección: Asociación de Fomento Villa Devoto, Biblioteca Presidente Roque Sáenz Peña, Joaquín V. González y Habana, CABA</li><li>Informes e inscripción:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar</b></li></ul>";
             //Colegio San Jose
-                    + "<br /><br /><ul><li>El acceso al Observatorio es <b>por escalera y equivale a 8 pisos. </b></li><li>Comienzo: Viernes 23 de Junio</li><li>Duración: 6 clases, finaliza 11 de agosto con 2 viernes de receso por vacaciones 21 y 28 de Julio.</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $1000 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) - El acceso al Observatorio es <b>por escalera y equivale a 8 pisos </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
+                    + "<br /><br /><ul><li>El acceso al Observatorio es <b>por escalera y equivale a 8 pisos. </b></li><li>Comienzo: Viernes 23 de Junio</li><li>Duración: 6 clases, finaliza 11 de agosto con 2 viernes de receso por vacaciones 21 y 28 de Julio.</li><li>Horario: Viernes de 20 a 22 hs</li><li>Arancel: $10000 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Lugar: Bartolomé Mitre 2455, Capital Federal (Colegio San José) </b></li><li>Inscripción: se realiza el mismo día de inicio al abonar el curso</li><li>Informes:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar</b></li></ul>";
 
             ////Charla sobre Ciencia y Fe
             //message = "Amigos de la Torre<br /><br />El Observatorio San José los invita a participar de la charla sobre Ciencia y Fe que tendrá lugar el próximo Viernes 06/12/19 a cargo del <b>Ingeniero Daniel Julián Checa</b> donde el tema principal será ¿Hay lugar en el Universo para Dios? En el pasado la cuestión de la ciencia y la fe ha originado enfrentamientos y persecuciones y hasta el día de hoy genera polémica y, a veces, sentimientos enfervorizados pero entendemos que la cuestión puede ser abordada y debatida desde el respeto en la diversidad de opiniones."
@@ -123,9 +117,11 @@ namespace Spammer
             mails = bLSpam.GetMailsFromFile("mails.txt");
             deleteMails = bLSpam.GetMailsFromFile("sacar.txt");
 
-			ProcessMails();
+            //ProcessMails();
 
-			Console.ReadKey();
-		}
-	}
+            bLSpam.ProcessFailedEmails("sacar.txt");
+
+            Console.ReadKey();
+        }
+    }
 }

@@ -22,3 +22,16 @@ C:\Desarrollo\WhatsMyIpSpammer\Spammer\bin\Debug\BusinessLogicWhatsMyIp.pdb
 C:\Desarrollo\WhatsMyIpSpammer\Spammer\bin\Debug\Common.pdb
 C:\desarrollo\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csprojAssemblyReference.cache
 C:\desarrollo\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.CopyComplete
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Spammer.exe.config
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Spammer.exe
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Spammer.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\BusinessLogicWhatsMyIp.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Common.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\BusinessLogicWhatsMyIp.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Common.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.AssemblyReference.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.CoreCompileInputs.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.CopyComplete
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.exe
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\OpenPop.dll

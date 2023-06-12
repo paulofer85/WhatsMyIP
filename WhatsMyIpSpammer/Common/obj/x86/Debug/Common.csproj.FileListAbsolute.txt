@@ -13,3 +13,11 @@ C:\Desarrollo\WhatsMyIpSpammer\Common\bin\Debug\Common.pdb
 C:\Desarrollo\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.dll
 C:\Desarrollo\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.pdb
 C:\desarrollo\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\bin\Debug\Common.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\bin\Debug\Common.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csproj.AssemblyReference.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\bin\Debug\OpenPop.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csproj.CopyComplete

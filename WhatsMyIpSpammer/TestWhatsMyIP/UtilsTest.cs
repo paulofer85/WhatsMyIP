@@ -15,7 +15,7 @@ namespace TestWhatsMyIP
 		[TestMethod]
 		public void SendMailTest()
 		{
-			SMTPEmail email = new SMTPEmail();
+			Email email = new Email();
 
 			email.From = ConfigurationManager.AppSettings["FromAddress"];
 			email.To = ConfigurationManager.AppSettings["ToAddress"];
