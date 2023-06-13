@@ -36,6 +36,22 @@ namespace Spammer
             }
 
             var selectedCourse = courses[selectedCourseIndex - 1];
+
+            Console.Write("Ingrese fecha del curso (formato dd/mm/AA): ");
+            string date= Console.ReadLine();
+            Console.Write("Horario del curso (formato '20 a 22'): ");
+            string hoursStartEnd = Console.ReadLine();
+            Console.Write("Cantidad de clases (solo numero ej. 5): ");
+            string amountClasses = Console.ReadLine();
+            Console.Write("Precio (ej. $10000): ");
+            string cost = Console.ReadLine();
+
+            selectedCourse.Message = selectedCourse.Message
+                .Replace("#DATE", date)
+                .Replace("#START_END", hoursStartEnd)
+                .Replace("#AMOUNT_CLASSES", amountClasses)
+                .Replace("#COST", cost);
+
             Console.WriteLine($"Seleccionaste: {selectedCourse.Name}");
             Console.WriteLine($"Subject: {selectedCourse.Subject}");
             Console.WriteLine($"Message: \r\n{selectedCourse.Message.Replace("<br />", "\r\n")}");
@@ -47,7 +63,7 @@ namespace Spammer
                 // Process the selected course
                 Console.WriteLine("Seleccion de curso confirmada procediendo envio de mails.");
                 Console.WriteLine("\r\n\r\n\r\n ====================================================================================\r\n\r\n");
-                bLSpam.ProcessMails(courses[selectedCourseIndex - 1]);
+                bLSpam.ProcessMails(selectedCourse);
             }
             else
             {

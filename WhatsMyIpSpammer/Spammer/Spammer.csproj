@@ -57,7 +57,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config.example">
+    <None Include="App.example">
       <SubType>Designer</SubType>
     </None>
     <None Include="App.config">

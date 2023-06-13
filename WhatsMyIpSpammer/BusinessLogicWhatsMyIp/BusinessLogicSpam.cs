@@ -226,7 +226,7 @@ namespace BusinessLogicWhatsMyIp
 						if (!deleteMails.Contains(adresses[cont].Mail) && adresses[cont].Mail != String.Empty)
 						{
 							SendMail(course.Subject, course.Message);
-							System.Console.WriteLine($"{DateTime.Now.ToString("yyMMdd HH:mm:ss")} | envió mail nro {cont}/{adresses.Count} mail {adresses[cont].Mail}");
+							System.Console.WriteLine($"{DateTime.Now.ToString("yyMMdd HH:mm:ss")} | envió mail nro {cont+1}/{adresses.Count} mail {adresses[cont].Mail}");
 						}
 						cont++;
 					}
