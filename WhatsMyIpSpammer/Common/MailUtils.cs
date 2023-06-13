@@ -12,24 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace Common
 {
-	public class Email
-	{
-		public string From { get; set; }
-		public string To { get; set; }
-		public string Message { get; set; }
-		public string Subject { get; set; }
-		public MailAddressCollection mailAddresses = new MailAddressCollection();
-		public string SMTPServer { get; set; }
-		public string SMTPClient { get; set; }
-		public int SMTPPort { get; set; }
-		public string Password{ get; set; }
-		public string Domain{ get; set; }
-		public bool IsSSL{ get; set; }
-		public bool UseDefaultCredentials{ get; set; }
-        public int POP3Port { get; set; }
-    }
-
-	public static class MailUtils
+    public static class MailUtils
 	{
 		public static bool IsValidEmail(string emailAddress)
 		{
@@ -248,7 +231,13 @@ namespace Common
 		public static string[] GetMailsFromFile(string file)
 		{
 			//se levantan los mails del archivo
-			return File.ReadAllText(@file).Split(';');
+			return File.ReadAllLines(file); 
+		}
+
+		public static string[] GetMailsFromFile(string file, char splitter)
+		{
+			//se levantan los mails del archivo
+			return File.ReadAllText(@file).Split(splitter);
 		}
 
 

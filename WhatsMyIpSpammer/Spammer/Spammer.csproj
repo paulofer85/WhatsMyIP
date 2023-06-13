@@ -51,8 +51,15 @@
       <Project>{CC2C3EBA-EA97-4EB4-B6B2-CB419113D56A}</Project>
       <Name>BusinessLogicWhatsMyIp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{229923B7-0738-4A1C-BFEE-ACF7F95D46B3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config.example">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>

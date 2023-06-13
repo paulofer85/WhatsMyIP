@@ -37,6 +37,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Course.cs" />
+    <Compile Include="Adress.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="IPUtils.cs" />
     <Compile Include="MailUtils.cs" />
   </ItemGroup>

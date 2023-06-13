@@ -30,3 +30,5 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\Busine
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\OpenPop.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Newtonsoft.Json.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Newtonsoft.Json.xml
