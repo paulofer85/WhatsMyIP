@@ -2,13 +2,11 @@
 using System.Net.Mail;
 using System.Net;
 using System.IO;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
-using System.Net.Sockets;
 using OpenPop.Pop3;
 using OpenPop.Mime.Header;
 using OpenPop.Mime;
 using System.Text.RegularExpressions;
+using Data;
 
 namespace Common
 {

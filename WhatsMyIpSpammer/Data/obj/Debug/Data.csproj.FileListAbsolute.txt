@@ -1,0 +1,6 @@
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Data\bin\Debug\Data.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Data\bin\Debug\Data.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Data\obj\Debug\Data.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Data\obj\Debug\Data.pdb

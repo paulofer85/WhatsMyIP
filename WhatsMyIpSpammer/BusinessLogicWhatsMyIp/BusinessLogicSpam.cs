@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Common;
 using System.Configuration;
 using System.IO;
 using OpenPop.Pop3;
 using Newtonsoft.Json;
+using Data;
 
 namespace BusinessLogicWhatsMyIp
 {
@@ -32,6 +32,22 @@ namespace BusinessLogicWhatsMyIp
 			deleteMails = GetMailsFromFile("sacar.txt");
 		}
 
+		private void ConfigureMailSettings()
+		{
+			email.From = ConfigurationManager.AppSettings["FromAddress"];
+			email.To = ConfigurationManager.AppSettings["ToAddress"];
+			email.SMTPClient = ConfigurationManager.AppSettings["SMTP"];
+			email.SMTPServer = ConfigurationManager.AppSettings["SMTP"];
+			email.SMTPPort = Convert.ToInt32(ConfigurationManager.AppSettings["SMTPPort"]);
+			email.POP3Port = Convert.ToInt32(ConfigurationManager.AppSettings["POP3Port"]);
+
+			email.Password = ConfigurationManager.AppSettings["Password"];
+			email.Domain = ConfigurationManager.AppSettings["Domain"];
+			email.IsSSL = bool.Parse(ConfigurationManager.AppSettings["EnableSSL"]);
+			email.UseDefaultCredentials = bool.Parse(ConfigurationManager.AppSettings["UseDefaultCredentials"]);
+		}
+
+
 		public bool SendMail(string subject, string message)
 		{
 			email.Subject = (subject == String.Empty) ? "[OSJ] NUEVO Curso de Astronomía Observacional" : subject;
@@ -41,44 +57,7 @@ namespace BusinessLogicWhatsMyIp
 			return MailUtils.SendEmail(email);
 		}
 
-		public void AddFailedEmailAddress(string emailAddress)
-		{
-			try
-			{
-				// Append the email address to the file
-				using (StreamWriter writer = File.AppendText(DeleteMailsFilePath))
-				{
-					writer.Write(emailAddress + ";");
-				}
 
-				Console.WriteLine($"Email address {emailAddress} added to the file.");
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("An error occurred while adding the email address to the file: " + ex.Message);
-			}
-		}
-
-
-		public void ProcessFailedEmails(string deletePathFile)
-		{
-			DeleteMailsFilePath = deletePathFile;
-			using (var client = new Pop3Client())
-			{
-				client.Connect(email.SMTPServer, email.POP3Port, false);
-				client.Authenticate(email.From, email.Password);
-				int emailCount = client.GetMessageCount();
-				for (int i = emailCount; i > 0; i--)
-				{
-					Email receivedEmail = MailUtils.GetEmailByIndex(client,i, email.SMTPServer, email.POP3Port, email.From, email.Password);
-					if (IsUndeliveredEmail(receivedEmail))
-					{
-						string failedAddress = MailUtils.ExtractEmailFromFailedSent(receivedEmail.Message);
-						AddFailedEmailAddress(failedAddress);
-					}
-				}
-			}
-		}
 
         private bool IsUndeliveredEmail(Email receivedEmail)
         {
@@ -89,31 +68,6 @@ namespace BusinessLogicWhatsMyIp
 				return true;
 			return false;
         }
-
-        private void ConfigureMailSettings()
-		{
-			email.From = ConfigurationManager.AppSettings["FromAddress"];
-			email.To = ConfigurationManager.AppSettings["ToAddress"];
-			email.SMTPClient = ConfigurationManager.AppSettings["SMTP"];
-			email.SMTPServer = ConfigurationManager.AppSettings["SMTP"];
-			email.SMTPPort = Convert.ToInt32(ConfigurationManager.AppSettings["SMTPPort"]);
-			email.POP3Port = Convert.ToInt32(ConfigurationManager.AppSettings["POP3Port"]);
-
-			email.Password = ConfigurationManager.AppSettings["Password"];			
-			email.Domain = ConfigurationManager.AppSettings["Domain"];
-			email.IsSSL = bool.Parse(ConfigurationManager.AppSettings["EnableSSL"]);
-			email.UseDefaultCredentials= bool.Parse(ConfigurationManager.AppSettings["UseDefaultCredentials"]);
-		}
-
-
-		public string[] GetMailsFromFile(string file)
-		{
-			string[] rdo;
-			EmailFilePath = file;
-			rdo = MailUtils.GetMailsFromFile(file);
-			if (rdo.Length > 1) return rdo;
-			return MailUtils.GetMailsFromFile(file, ';');
-		}
 
 		public void UpdateMailsWithBounced(string mailsFile, string bouncedFile)
 		{
@@ -134,6 +88,35 @@ namespace BusinessLogicWhatsMyIp
 			Console.WriteLine("Mails updated successfully.");
 		}
 
+		public void UpdateJsonMailsWithBounced(string mailsJson, string bouncedFile)
+		{
+			List<Adress> mails = GetMailsFromJson(mailsJson);
+			string[] bounceds = MailUtils.GetMailsFromFile(bouncedFile);
+			string fileBackup = $"{mailsJson.Split('.').First()}{DateTime.Now.ToString("yyyyMMdd")}.json";
+			string jsonBackup = JsonConvert.SerializeObject(mails, Formatting.Indented);
+			File.WriteAllText(fileBackup, jsonBackup);
+
+			List<Adress> updatedAddresses = new List<Adress>(mails);
+			foreach (string bounced in bounceds)
+			{
+				if (updatedAddresses.Exists(x => x.Mail.Contains(bounced)))
+					updatedAddresses.RemoveAll(x => x.Mail == bounced);
+			}
+
+			string jsonNew= JsonConvert.SerializeObject(updatedAddresses, Formatting.Indented);
+			File.WriteAllText(mailsJson, jsonNew);
+
+			Console.WriteLine("JSON Mails updated successfully.");
+		}
+
+		public string[] GetMailsFromFile(string file)
+		{
+			string[] rdo;
+			EmailFilePath = file;
+			rdo = MailUtils.GetMailsFromFile(file);
+			if (rdo.Length > 1) return rdo;
+			return MailUtils.GetMailsFromFile(file, ';');
+		}
 		public void GenerateJSONFromFile(string file)
 		{
 			List<string> emailAddresses = GetMailsFromFile(file).ToList();
@@ -212,6 +195,44 @@ namespace BusinessLogicWhatsMyIp
 			return JsonConvert.DeserializeObject<Course[]>(json);
 		}
 
+		public void AddFailedEmailAddress(string emailAddress)
+		{
+			try
+			{
+				// Append the email address to the file
+				using (StreamWriter writer = File.AppendText(DeleteMailsFilePath))
+				{
+					writer.Write(emailAddress + ";");
+				}
+
+				Console.WriteLine($"Email address {emailAddress} added to the file.");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("An error occurred while adding the email address to the file: " + ex.Message);
+			}
+		}
+
+		public void ProcessFailedEmails(string deletePathFile)
+		{
+			DeleteMailsFilePath = deletePathFile;
+			using (var client = new Pop3Client())
+			{
+				client.Connect(email.SMTPServer, email.POP3Port, false);
+				client.Authenticate(email.From, email.Password);
+				int emailCount = client.GetMessageCount();
+				for (int i = emailCount; i > 0; i--)
+				{
+					Email receivedEmail = MailUtils.GetEmailByIndex(client, i, email.SMTPServer, email.POP3Port, email.From, email.Password);
+					if (IsUndeliveredEmail(receivedEmail))
+					{
+						string failedAddress = MailUtils.ExtractEmailFromFailedSent(receivedEmail.Message);
+						AddFailedEmailAddress(failedAddress);
+					}
+				}
+			}
+		}
+
 		public void ProcessMails(Course course)
 		{
 			try
@@ -247,35 +268,7 @@ namespace BusinessLogicWhatsMyIp
 
 		public void ProcessMails(string subject, string message)
 		{
-			try
-			{
-				int cont = 0;
-				while (cont < adresses.Count)
-				{
-					if (sendCount < 150)
-					{
-						lastSendTime = DateTime.Now;
-						if (!deleteMails.Contains(adresses[cont].Mail) && adresses[cont].Mail != String.Empty)
-						{
-							SendMail(subject, message);
-
-							System.Console.WriteLine("WhatsMyIPSpammer: se envio el mail nro " + cont + " mail " + adresses[cont].Mail);
-						}
-						cont++;
-					}
-					else if (DateTime.Now > lastSendTime.AddHours(1))
-					{
-						sendCount = 0;
-						System.Console.WriteLine("WhatsMyIPSpammer: se cumplio la hora luego de haber enviado lote de mails");
-					}
-					System.Threading.Thread.Sleep(5000);
-				}
-				System.Console.ReadKey();
-			}
-			catch (Exception x)
-			{
-				System.Console.WriteLine(new System.IO.ErrorEventArgs(x).ToString());
-			}
+			ProcessMails(new Course(subject, message));
 		}
 	}
 }

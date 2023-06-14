@@ -37,3 +37,5 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\OpenPop.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Newtonsoft.Json.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Newtonsoft.Json.xml
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Data.dll
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Data.pdb

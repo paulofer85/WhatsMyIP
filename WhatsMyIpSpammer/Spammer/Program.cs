@@ -5,6 +5,7 @@ using System.Text;
 using BusinessLogicWhatsMyIp;
 using System.Diagnostics;
 using Common;
+using Data;
 
 namespace Spammer
 {

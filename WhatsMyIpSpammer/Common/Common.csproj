@@ -37,9 +37,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Course.cs" />
-    <Compile Include="Adress.cs" />
-    <Compile Include="Email.cs" />
     <Compile Include="IPUtils.cs" />
     <Compile Include="MailUtils.cs" />
   </ItemGroup>
@@ -51,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{4eb9ebc8-8ba0-4b33-91e6-166f6913bdc0}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

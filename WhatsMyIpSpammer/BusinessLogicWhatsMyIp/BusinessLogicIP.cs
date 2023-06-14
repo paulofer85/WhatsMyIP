@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Common;
 using System.Configuration;
+using Data;
 
 namespace BusinessLogicWhatsMyIp
 {

@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Common;
 using System.Configuration;
 using System.Text.RegularExpressions;
+using Data;
 
 namespace TestWhatsMyIP
 {

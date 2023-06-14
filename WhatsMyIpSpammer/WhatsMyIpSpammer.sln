@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcWhatsMyIPSpammer", "SvcIP\SvcWhatsMyIPSpammer.csproj", "{6261AE3E-4333-43D3-8206-B2078305C450}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{229923B7-0738-4A1C-BFEE-ACF7F95D46B3}"
@@ -21,10 +23,9 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupWhatsMyIp", "SetupWhat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spammer", "Spammer\Spammer.csproj", "{6B049BC0-FD4A-4D4C-9750-71ED9CA0F472}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = WhatsMyIp.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -90,8 +91,26 @@ Global
 		{6B049BC0-FD4A-4D4C-9750-71ED9CA0F472}.Release|Mixed Platforms.Build.0 = Release|x86
 		{6B049BC0-FD4A-4D4C-9750-71ED9CA0F472}.Release|x86.ActiveCfg = Release|x86
 		{6B049BC0-FD4A-4D4C-9750-71ED9CA0F472}.Release|x86.Build.0 = Release|x86
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Debug|x86.Build.0 = Debug|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Release|x86.ActiveCfg = Release|Any CPU
+		{4EB9EBC8-8BA0-4B33-91E6-166F6913BDC0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FE37B6F-AC1E-4445-8A79-C9458FECA4B2}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = WhatsMyIp.vsmdi
 	EndGlobalSection
 EndGlobal

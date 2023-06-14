@@ -1,6 +1,6 @@
 ﻿using System.Net.Mail;
 
-namespace Common
+namespace Data
 {
     public class Email
 	{

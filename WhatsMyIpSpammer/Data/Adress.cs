@@ -1,4 +1,4 @@
-﻿namespace Common
+﻿namespace Data
 {
     public class Adress
 	{
