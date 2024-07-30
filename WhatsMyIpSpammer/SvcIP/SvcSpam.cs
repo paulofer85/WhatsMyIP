@@ -37,7 +37,7 @@ namespace SvcWhatsMyIP
 
 			message = "Amigos de la Torre<br /><br />El viernes 21/03/14 comienza el curso de <b>'Astronomía Observacional'</b>, el objeto de este curso es que el alumno adquiera un conocimiento integral del cielo nocturno y aprenda paulatinamente conceptos como: sistemas de coordenadas, constelaciones, movimientos de los planetas, principales estrellas y lectura e interpretación de diferentes cartas celestes. El curso está basado principalmente en observaciones prácticas, con diferentes instrumentos, a fin de que los participantes logren familiarizarse rápidamente con el firmamento. Las observaciones con los instrumentos del observatorio se harán de acuerdo a las efemérides y a las condiciones meteorológicas."
 							+ "<br /><br /><b>Dados los contenidos y metodologías aplicadas en el curso, el mismo es para adultos y chicos de 12 años en adelante y no se necesitan conocimientos previos de matemática, física o astronomía.</b>"
-								+ "<b><br /><br /><ul><li>Comienzo: viernes 21/03/14</li><li>Duración: 4 clases</li><li>Horario: viernes de 20 a 22 hs</li><li>Arancel: $300 (se abonan el mismo día del inicio del curso) - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Dirección: Bartolomé Mitre 2455, Capital Federal (Colegio San José)</li><li>Informes e inscripción:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
+								+ "<b><br /><br /><ul><li>Comienzo: viernes 21/03/14</li><li>Duración: 4 clases</li><li>Horario: viernes de 20 a 22 hs</li><li>Arancel: $300 (se abonan el mismo día del inicio del curso; cupos limitados)  - Alumnos del Colegio San José gratis - Todo lo recaudado se destina al mantenimiento del observatorio</li><li>Dirección: Bartolomé Mitre 2455, Capital Federal (Colegio San José)</li><li>Informes e inscripción:<br />www.observatoriosanjose.com.ar<br />informes@observatoriosanjose.com.ar<br />infoosj@yahoo.com.ar</b></li></ul>";
 
 			mails = bLSpam.GetMailsFromFile("C:/mails.txt");
 
@@ -60,7 +60,7 @@ namespace SvcWhatsMyIP
 						{
 							lastSendTime = DateTime.Now;
                             //bLSpam.SendMail("[OSJ] NUEVO Curso de Telescopios", message);
-                            bLSpam.SendMail("[OSJ] NUEVO Curso de Astronomía Observacional", message);
+                            bLSpam.SendMail("[OSJ] NUEVO Curso de Astronomía Observacional", message, to);
 							this.EventLog.WriteEntry("WhatsMyIPSpammer: se envio el mail nro " + bLSpam.sendCount);
 							System.Threading.Thread.Sleep(1000);
 						}

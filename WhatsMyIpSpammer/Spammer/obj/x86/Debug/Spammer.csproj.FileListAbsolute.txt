@@ -31,7 +31,6 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\BusinessLogicWhatsMyI
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Common.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.AssemblyReference.cache
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.CoreCompileInputs.cache
-C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.CopyComplete
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.exe
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\OpenPop.dll
@@ -39,3 +38,4 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Newtonsoft.Json.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Newtonsoft.Json.xml
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Data.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\bin\Debug\Data.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Spammer\obj\x86\Debug\Spammer.csproj.Up2Date

@@ -198,11 +198,11 @@ namespace Common
 
 			// Retrieve the sender
 			RfcMailAddress sender = lastMessage.Headers.From;
-			emailRdo.From = sender.Address.ToLower();
+			emailRdo.From = sender != null? sender.Address.ToLower() : String.Empty;
 
 			// Retrieve the recipient
-			RfcMailAddress recipient = lastMessage.Headers.To[0];
-			emailRdo.To = recipient.Address;
+			RfcMailAddress recipient = lastMessage.Headers.To.Count > 0 ? lastMessage.Headers.To[0] : null;
+			emailRdo.To = recipient != null? recipient.Address : String.Empty;
 
 			// Retrieve the body
 			MessagePart body = lastMessage.FindFirstPlainTextVersion();

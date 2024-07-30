@@ -26,7 +26,6 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Common
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Common.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.AssemblyReference.cache
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.CoreCompileInputs.cache
-C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.csproj.CopyComplete
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\BusinessLogicWhatsMyIp.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\OpenPop.dll
@@ -34,3 +33,4 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Newton
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Newtonsoft.Json.xml
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Data.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\bin\Debug\Data.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\BusinessLogicWhatsMyIp\obj\Debug\Business.34E56ED6.Up2Date

@@ -20,6 +20,6 @@ C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csproj.Core
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.pdb
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\bin\Debug\OpenPop.dll
-C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csproj.CopyComplete
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\bin\Debug\Data.dll
 C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\bin\Debug\Data.pdb
+C:\desarrollo\WhatsMyIP\WhatsMyIpSpammer\Common\obj\x86\Debug\Common.csproj.Up2Date

@@ -42,15 +42,18 @@ namespace Spammer
             string date= Console.ReadLine();
             Console.Write("Horario del curso (formato '20 a 22'): ");
             string hoursStartEnd = Console.ReadLine();
-            Console.Write("Cantidad de clases (solo numero ej. 5): ");
+            Console.Write("Cantidad de clases (ej. 5 clases): ");
             string amountClasses = Console.ReadLine();
             Console.Write("Precio (ej. $10000): ");
             string cost = Console.ReadLine();
+            Console.Write("Direccion (Azcuenaga 158 o Bartolomé Mitre 2455): ");
+            string address = Console.ReadLine();
 
             selectedCourse.Message = selectedCourse.Message
                 .Replace("#DATE", date)
                 .Replace("#START_END", hoursStartEnd)
                 .Replace("#AMOUNT_CLASSES", amountClasses)
+                .Replace("#ADDRESS", address)
                 .Replace("#COST", cost);
 
             Console.WriteLine($"Seleccionaste: {selectedCourse.Name}");
@@ -71,9 +74,9 @@ namespace Spammer
                 Console.WriteLine("Selección de cursos cancelada.");
             }
 
-            //bLSpam.ProcessFailedEmails("sacar.txt");
-            //bLSpam.UpdateMailsWithBounced("mails.txt", "sacar.txt");
-            //bLSpam.GenerateJSONFromFile("mails.txt");
+            bLSpam.ProcessFailedEmails("sacar.txt");
+            bLSpam.UpdateMailsWithBounced("mails.txt", "sacar.txt");
+            bLSpam.GenerateJSONFromFile("mails.txt");
             Console.ReadKey();
         }
     }

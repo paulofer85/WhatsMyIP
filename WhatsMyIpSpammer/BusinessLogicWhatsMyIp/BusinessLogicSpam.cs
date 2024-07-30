@@ -48,10 +48,11 @@ namespace BusinessLogicWhatsMyIp
 		}
 
 
-		public bool SendMail(string subject, string message)
+		public bool SendMail(string subject, string message, string to)
 		{
 			email.Subject = (subject == String.Empty) ? "[OSJ] NUEVO Curso de Astronomía Observacional" : subject;
 			email.Message = message;
+			email.To = to;
 
 			sendCount++;
 			return MailUtils.SendEmail(email);
@@ -72,7 +73,7 @@ namespace BusinessLogicWhatsMyIp
 		public void UpdateMailsWithBounced(string mailsFile, string bouncedFile)
 		{
 			string[] mails = MailUtils.GetMailsFromFile(mailsFile);
-			string[] bounceds = MailUtils.GetMailsFromFile(bouncedFile);
+			string[] bounceds = MailUtils.GetMailsFromFile(bouncedFile)[0].Split(';');
 			string fileBackup = $"{mailsFile.Split('.').First()}{DateTime.Now.ToString("yyyyMMdd")}.txt";
 			File.WriteAllLines(fileBackup, mails);
 
@@ -246,7 +247,7 @@ namespace BusinessLogicWhatsMyIp
 						lastSendTime = DateTime.Now;
 						if (!deleteMails.Contains(adresses[cont].Mail) && adresses[cont].Mail != String.Empty)
 						{
-							SendMail(course.Subject, course.Message);
+							SendMail(course.Subject, course.Message, adresses[cont].Mail);
 							System.Console.WriteLine($"{DateTime.Now.ToString("yyMMdd HH:mm:ss")} | envió mail nro {cont+1}/{adresses.Count} mail {adresses[cont].Mail}");
 						}
 						cont++;
